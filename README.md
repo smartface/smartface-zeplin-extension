@@ -53,6 +53,6 @@ Sample text style output:
 
 ## Development
 
-React Native extension is developed using [zem](https://github.com/zeplin/zem), Zeplin Extension Manager. zem is a command line tool that lets you quickly create and test extensions.
+Smartface extension is developed using [zem](https://github.com/zeplin/zem), Zeplin Extension Manager. zem is a command line tool that lets you quickly create and test extensions.
 
 To learn more about zem, [see documentation](https://github.com/zeplin/zem).

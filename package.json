@@ -1,6 +1,6 @@
 {
   "name": "smartface-zeplin-extension",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Generates Smartface themes from colors and text styles.",
   "scripts": {
     "start": "zem start",
