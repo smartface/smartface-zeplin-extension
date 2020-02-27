@@ -1,6 +1,6 @@
 {
   "name": "smartface-zeplin-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates Smartface themes from colors and text styles.",
   "scripts": {
     "start": "zem start",
@@ -17,7 +17,7 @@
     "name": "Ozcan Ovunc",
     "email": "ozcan.ovunc@smartface.io"
   },
-  "repository": "https://github.com/smartface/zeplin-extension.git",
+  "repository": "https://github.com/smartface/smartface-zeplin-extension.git",
   "dependencies": {
     "zem": "^0.4.4"
   }
