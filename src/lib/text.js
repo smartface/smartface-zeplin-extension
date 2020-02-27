@@ -2,7 +2,13 @@ import {
     generateColor
 } from "./color";
 
-function generateTextStyleCatalog(textStyles) {
+import {
+    reverseObject,
+    beautifyStyleName
+} from "./utils";
+
+function generateTextStyleCatalog(textStyles, colorMap) {
+    let reversedColorMap = reverseObject(colorMap);
     let textStyleCatalog = {};
     textStyles
         .forEach(textStyle => {
@@ -10,9 +16,14 @@ function generateTextStyleCatalog(textStyles) {
                 fontSize,
                 color,
                 fontFamily,
-                name, // TODO: Convert class name
+                name,
                 weightText
             } = textStyle;
+            let textColor = generateColor(color);
+            if (reversedColorMap[textColor]) {
+                let colorName = reversedColorMap[textColor];
+                textColor = `\${${colorName}}`;
+            }
             let styleObject = {
                 font: {
                     family: fontFamily,
@@ -20,9 +31,9 @@ function generateTextStyleCatalog(textStyles) {
                     size: fontSize
                     // TODO: bold: true, italic: true etc
                 },
-                textColor: generateColor(color) // TODO: Match with variable
+                textColor
             };
-            textStyleCatalog[name] = styleObject;
+            textStyleCatalog[beautifyStyleName(name)] = styleObject;
         });
     return textStyleCatalog;
 }

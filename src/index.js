@@ -12,7 +12,8 @@ function colors(context) {
 }
 
 function textStyles(context) {
-    let textStyleCatalog = generateTextStyleCatalog(context.project.textStyles);
+    let colorMap = generateColorMap(context.project.colors);
+    let textStyleCatalog = generateTextStyleCatalog(context.project.textStyles, colorMap);
     return {
         code: JSON.stringify(textStyleCatalog, null, "\t"),
         language: "javascript"
