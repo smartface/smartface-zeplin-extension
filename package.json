@@ -1,6 +1,6 @@
 {
   "name": "smartface-zeplin-extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generates Smartface themes from colors and text styles.",
   "scripts": {
     "start": "zem start",
@@ -11,7 +11,10 @@
   },
   "zeplin": {
     "displayName": "Smartface",
-    "platforms": ["ios", "android"]
+    "platforms": [
+      "ios",
+      "android"
+    ]
   },
   "author": {
     "name": "Ozcan Ovunc",
@@ -20,5 +23,8 @@
   "repository": "https://github.com/smartface/smartface-zeplin-extension.git",
   "dependencies": {
     "zem": "^0.4.4"
+  },
+  "devDependencies": {
+    "@zeplin/eslint-config": "^2.3.1"
   }
 }
